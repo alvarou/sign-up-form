@@ -47,11 +47,11 @@
                 <div id="tel-error" class="error"></div>
               </label>
               <label for="password">Password
-                <input type="password" id="password" name="password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="password" id="password" name="password" required="" >
                 <div id="password-error" class="error"></div>
               </label>
               <label for="passwordC">Confirm
-                <input type="password" id="passwordC" name="passwordC" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="password" id="passwordC" name="passwordC" required="" >
                 <div id="passwordC-error" class="error"></div>
               </label>
             </form>
@@ -59,7 +59,9 @@
         </div>
         <div class="submit-section">
           <div>
-            <button type="submit" form="my-form">Create Account</button>
+            <button type="submit" form="my-form"   
+            onclick="return validatePasswordMatch()"
+            >Create Account</button>
             <p>Already have an account? <a href="">Log in</a></p>
           </div>
         </div>
