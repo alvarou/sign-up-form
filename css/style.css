@@ -1,3 +1,14 @@
+@font-face {
+  font-family: customFont;
+  src: url(../font/Norse-Bold.otf);
+}
+
+@font-face {
+  font-family: customFontBold;
+  src: url(../font/Norse-Bold.otf);
+}
+
+
 .main {
     display: flex;
     justify-content: center;
@@ -49,6 +60,12 @@
     background-color: rgb(240, 240, 240);
   }
   
+  label {
+    position: relative;
+    width: 15rem;
+    margin-bottom: 15px;
+  }
+  
   .inputs {
     display: flex;
     justify-content: center;
@@ -64,4 +81,46 @@
     flex-flow: row wrap;
     gap: 1rem;
     font-size: 1rem;
+  }
+
+  button {
+    background-color:#596D48;
+
+  }
+
+  input {
+    font-family: customFontBold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: .9rem;
+    margin-top: 3px;
+  }
+  @media screen and (max-width: 850px) {
+  
+    .main{
+      flex-direction: column;
+    }
+    .side{
+      width: 100vw;
+      height: 20rem;
+    }
+  
+    .header div, .inputs, .submit-section div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .form, form, .submit-section{
+      width: 100vw;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 505px) {
+  
+    label {
+      margin-bottom: 25px;
+    }
   }
